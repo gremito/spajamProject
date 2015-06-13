@@ -30,7 +30,7 @@ $(function() {
             $menuBg = $('.menu_bg'),
             WinTop = $(window).scrollTop();
         
-        $menuBtn.on('click touchstart',function() {        
+        $menuBtn.on('click',function() {        
             
          if (!$offcanvasMenu.is(':animated')) {
                 $(this).toggleClass('btn_close');
@@ -74,7 +74,7 @@ $(function() {
         });
         
         
-        $menuBg.on('click touchend',function() {
+        $menuBg.on('click',function() {
             if ($(this).css('display') == 'block') {
                 $('.menu_btn').click();
                 $menuBtn.removeClass('btn_close');
