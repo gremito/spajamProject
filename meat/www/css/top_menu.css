@@ -1,0 +1,71 @@
+/* top menu */
+.top_menu {
+	margin: 46px 5px 20px;
+}
+
+.top_menu h2 {
+	width: 217px;
+	margin: 0 auto;
+}
+
+.top_menu h2 img {
+	width: 100%;
+}
+
+.menu_button_area {
+	margin: 26px 0 0;
+}
+
+.menu_button_area > * {
+	float: left;
+	display:block;
+	width: 149px;
+	height: 149px;
+	background-size:149px auto !important;
+}
+
+.menu_button_area > *:focus {
+	outline: none;
+	border:none;
+}
+
+.menu_button_area:after {
+	clear: both;
+}
+
+.button_cow {
+	background:url(../img/top/btn_01.png) no-repeat;
+}
+
+.button_cow:focus {
+	background:url(../img/top/btn_on_01.png) no-repeat;
+}
+
+.button_pig {
+	background:url(../img/top/btn_02.png) no-repeat;
+}
+
+.button_pig:focus {
+	background:url(../img/top/btn_on_02.png) no-repeat;
+}
+
+.button_chick {
+	background:url(../img/top/btn_03.png) no-repeat;
+}
+
+.button_chick:focus {
+	background:url(../img/top/btn_on_03.png) no-repeat;
+}
+
+.button_add {
+	background:url(../img/top/btn_04.png) no-repeat;
+	border:none;
+}
+
+.button_add:focus {
+	background:url(../img/top/btn_on_04.png) no-repeat;
+}
+
+.menu_button_area > a:nth-of-type(odd) {
+	margin: 0 10px 8px 0;
+}
