@@ -16,7 +16,8 @@
 	margin: 26px 0 0;
 }
 
-.menu_button_area > * {
+.menu_button_area > *,
+.menu_button_next > * {
 	float: left;
 	display:block;
 	width: 149px;
@@ -68,4 +69,22 @@
 
 .menu_button_area > a:nth-of-type(odd) {
 	margin: 0 10px 8px 0;
+}
+
+.button_soon {
+	display:block;
+	width: 149px;
+	height: 149px;
+	color: #fff;
+	font-size:52px;
+	font-weight:bold;
+	text-align:center;
+	line-height: 1.0;
+	background: #ef7540;
+	border-radius:50%;
+	padding: 48px 0 0;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }

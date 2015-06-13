@@ -592,7 +592,7 @@ img.mfp-img {
   max-width: 100%;
   height: auto;
   display: block;
-  line-height: 0;
+  line-height: 1.0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

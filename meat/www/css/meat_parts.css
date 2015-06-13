@@ -1,0 +1,192 @@
+/* meat_detail */
+.meat_detail {
+	margin: 58px 5px 20px;
+}
+
+.meat_detail h2 {
+	width: 217px;
+	margin: 0 auto;
+}
+
+.meat_detail h2 img {
+	width: 100%;
+}
+
+.meat_area {
+	width: 312px;
+	background-size:312px auto !important;
+	margin: 40px auto 20px;
+}
+
+.cow {
+	height: 204px;
+	background: url(../img/beef_parts/cow/cow.png) no-repeat;
+	z-index: 1;
+}
+
+.cow.zombie {
+	background: url(../img/beef_parts/cow/cow_zombie.png) no-repeat;
+}
+
+
+.cow > .meat_part {
+	position:relative;
+	width: 206px;
+	height: 96px;
+	margin: 28px 0 0 61px;
+}
+
+.meat_part > * {
+	position:absolute;
+}
+
+.cow .parts_01 {
+	top:4px;
+	left:1px;
+	width: 23px;
+	height: 39px;
+	background: url(../img/beef_parts/cow/meet_01.png) no-repeat;
+	background-size:23px auto !important;
+	z-index: 11;	
+}
+
+.cow .parts_02 {
+	top:0;
+	left:18px;
+	width: 44px;
+	height: 29px;
+	background: url(../img/beef_parts/cow/meet_03.png) no-repeat;
+	background-size:44px auto !important;
+	z-index: 12;	
+}
+
+.cow .parts_03 {
+	top:18px;
+	left:8px;
+	width: 38px;
+	height: 45px;
+	background: url(../img/beef_parts/cow/meet_05.png) no-repeat;
+	background-size:38px auto !important;
+	z-index: 13;	
+}
+
+.cow .parts_04 {
+	top:43px;
+	left:0;
+	width: 9px;
+	height: 11px;
+	background: url(../img/beef_parts/cow/meet_02.png) no-repeat;
+	background-size: 9px auto !important;
+	z-index: 16;	
+}
+
+.cow .parts_05 {
+	top:48px;
+	left:4px;
+	width: 12px;
+	height: 15px;
+	background: url(../img/beef_parts/cow/meet_04.png) no-repeat;
+	background-size: 12px auto !important;
+	z-index: 15;	
+}
+
+.cow .parts_06 {
+	top:64px;
+	left:8px;
+	width: 37px;
+	height: 32px;
+	background: url(../img/beef_parts/cow/meet_15.png) no-repeat;
+	background-size: 37px auto !important;
+	z-index: 17;	
+}
+
+.cow .parts_07 {
+	top:55px;
+	left:44px;
+	width: 133px;
+	height: 42px;
+	background: url(../img/beef_parts/cow/meet_14.png) no-repeat;
+	background-size: 133px auto !important;
+	z-index: 14;	
+}
+
+.cow .parts_08 {
+	top:47px;
+	left:134px;
+	width: 23px;
+	height: 17px;
+	background: url(../img/beef_parts/cow/meet_13.png) no-repeat;
+	background-size: 23px auto !important;
+	z-index: 20;	
+}
+
+.cow .parts_09 {
+	top: 22px;
+	left: 47px;
+	width: 130px;
+	height: 40px;
+	background: url(../img/beef_parts/cow/meet_10.png) no-repeat;
+	background-size: 130px auto !important;
+	z-index: 19;	
+}
+
+.cow .parts_10 {
+	top: 1px;
+	left: 64px;
+	width: 56px;
+	height: 27px;
+	background: url(../img/beef_parts/cow/meet_06.png) no-repeat;
+	background-size: 56px auto !important;
+	z-index: 21;	
+}
+
+.cow .parts_11 {
+	top: 4px;
+	left: 120px;
+	width: 53px;
+	height: 23px;
+	background: url(../img/beef_parts/cow/meet_07.png) no-repeat;
+	background-size: 53px auto !important;
+	z-index: 22;	
+}
+
+.cow .parts_12 {
+	top: 54px;
+	left: 150px;
+	width: 26px;
+	height: 14px;
+	background: url(../img/beef_parts/cow/meet_12.png) no-repeat;
+	background-size: 26px auto !important;
+	z-index: 18;	
+}
+
+.cow .parts_13 {
+	top: 4px;
+	left: 173px;
+	width: 19px;
+	height: 23px;
+	background: url(../img/beef_parts/cow/meet_08.png) no-repeat;
+	background-size: 19px auto !important;
+	z-index: 25;	
+}
+
+.cow .parts_14 {
+	top: 4px;
+	left: 177px;
+	width: 30px;
+	height: 48px;
+	background: url(../img/beef_parts/cow/meet_09.png) no-repeat;
+	background-size: 30px auto !important;
+	z-index: 23;	
+}
+
+
+.cow .parts_15 {
+	top: 52px;
+	left: 176px;
+	width: 28px;
+	height: 36px;
+	background: url(../img/beef_parts/cow/meet_11.png) no-repeat;
+	background-size: 28px auto !important;
+	z-index: 24;	
+}
