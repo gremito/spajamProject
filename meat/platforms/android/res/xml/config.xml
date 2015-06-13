@@ -13,7 +13,7 @@
         Apache Cordova Team
     </author>
     <preference name="SplashScreen" value="meat" />
-    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="SplashScreenDelay" value="3000" />
     <preference name="SplashMaintainAspectRatio" value="true|false" />
     <content src="index.html" />
     <access origin="*" />
