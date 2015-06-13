@@ -80,4 +80,12 @@ $(function() {
                 $menuBtn.removeClass('btn_close');
            }
         });
+        
+        /*アコーディオン */
+       var $AccrodButton = $('.accord_button'),
+       	  $AccrodAria = $AccrodButton.next('p');
+       	  
+       	  $AccrodButton.on('click',function() {
+       	  	$(this).next('p').slideToggle();
+       	  });
  });
