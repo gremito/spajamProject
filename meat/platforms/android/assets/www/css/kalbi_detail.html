@@ -27,8 +27,8 @@
         <link rel="stylesheet" type="text/css"  href="css/normalize.css"/>
         <link rel="stylesheet" type="text/css"  href="css/slick.css"/>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
-        <title>HOME</title>
+        <link rel="stylesheet" type="text/css" href="css/.css" />
+        <title>カルビ</title>
     </head>
     
     <body>
@@ -37,23 +37,33 @@
         <nav class="nav_menu">
 				<div class="nav_header">&nbsp;</div>
 				<ul>
-					<li><a href="http://www.google.co.jp/">search</a></li>
+					<li><a href="">home</a></li>
+					<li><a href="">profile</a></li>
+					<li><a href="">circle</a></li>
+					<li><a href="">search</a></li>
 				</ul>
 			</nav>
 			<header>
 				<div>
-				<h1>HOME</h1>
+				<h1>カルビ</h1>
 				<button id="slide_menu"><img src="img/button_menu.png" alt="menu" /></button> 
 				</div>	
 			</header>
-			<div class="top_menu">
-				<h2><img src="img/top/title_01.png" alt="Meet Select" /></h2>
-				<div class="menu_button_area cf">
-					<a class="button_cow" href=""> </a>
-					<a class="button_pig" href=""> </a>
-					<a class="button_chick" href=""> </a>
-					<button class="button_add"> </button>
-				</div>
+			<div class="mainvisual">
+				<a class="meat_image mfp-with-zoom" href="img/img_meat.jpg"><img src="img/img_meat.jpg" /><p>ミディアム</p></a>
+				<a class="meat_image mfp-with-zoom" href="img/img_meat.jpg"><img src="img/img_meat.jpg" /><p>レア</p></a>
+				<a class="meat_image mfp-with-zoom" href="img/img_meat.jpg"><img src="img/img_meat.jpg" /><p>ダメなやつ</p></a>
+				<a class="meat_image mfp-with-zoom" href="img/img_meat.jpg"><img src="img/img_meat.jpg" /><p>レア</p></a>
+			</div>
+			<p class="dt_expalin">
+				焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。
+			</p>
+			<div class="accordion">
+				<input type="checkbox" value="" id="accord_switch"/>
+				<label class="accord_button" for="accord_switch">
+					ミトビアはこちら
+				</label>
+				<p>肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！肉を食うものは世界を制す！</p>
 			</div>
 			<footer>
 				<small>&copy; Denpa DANDY all rights reserved</small>
@@ -67,16 +77,36 @@
         <script type="text/javascript" src="js/slick.min.js"></script>
         <script type="text/javascript">
 			$(document).ready(function() {
-				var $menuButton = $('.menu_button_area > *');
-				$menuButton.on('click',function() {
-					var TouchButton = $(this); 
-					if(TouchButton.hasClass('focus')) {
-						TouchButton.removeClass('focus');
-					} else {
-						TouchButton.addClass('focus');
+
+				//main slide
+				$('.mainvisual').slick({
+					slide : 'a',
+					arrows : false,
+					dots : false,
+					autoplay : true,
+					autoplaySpeed : 4000,
+					variableWidth : true,
+					centerMode : true,
+					slidesToShow : 3,
+					onInit : function() {
+						$('.mainvisual a').show();
 					}
 				});
 
+				//modal window
+				$('.meat_image').magnificPopup({
+					type : 'image',
+					mainClass : 'mfp-with-zoom',
+					zoom : {
+						enabled : true,
+						duration : 300,
+						easing : 'ease-in-out',
+						opener : function(openerElement) {
+							return openerElement.is('img') ? openerElement : openerElement.find('img');
+						}
+					}
+
+				});
 
 			});
 		</script>

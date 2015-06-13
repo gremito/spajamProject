@@ -27,8 +27,8 @@
         <link rel="stylesheet" type="text/css"  href="css/normalize.css"/>
         <link rel="stylesheet" type="text/css"  href="css/slick.css"/>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/.css" />
-        <title>カルビ</title>
+        <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
+        <title>HOME</title>
     </head>
     
     <body>
@@ -37,19 +37,24 @@
         <nav class="nav_menu">
 				<div class="nav_header">&nbsp;</div>
 				<ul>
-					<li><a href="">home</a></li>
-					<li><a href="">profile</a></li>
-					<li><a href="">circle</a></li>
-					<li><a href="">search</a></li>
+					<li><a href="http://www.google.co.jp/">search</a></li>
 				</ul>
 			</nav>
 			<header>
 				<div>
-				<h1>カルビ</h1>
+				<h1>HOME</h1>
 				<button id="slide_menu"><img src="img/button_menu.png" alt="menu" /></button> 
 				</div>	
 			</header>
-			
+			<div class="top_menu">
+				<h2><img src="img/top/title_01.png" alt="Meet Select" /></h2>
+				<div class="menu_button_area cf">
+					<a class="button_cow" href=""> </a>
+					<a class="button_pig" href=""> </a>
+					<a class="button_chick" href=""> </a>
+					<button class="button_add"> </button>
+				</div>
+			</div>
 			<footer>
 				<small>&copy; Denpa DANDY all rights reserved</small>
 			</footer>
@@ -62,36 +67,16 @@
         <script type="text/javascript" src="js/slick.min.js"></script>
         <script type="text/javascript">
 			$(document).ready(function() {
-
-				//main slide
-				$('.mainvisual').slick({
-					slide : 'a',
-					arrows : false,
-					dots : false,
-					autoplay : true,
-					autoplaySpeed : 4000,
-					variableWidth : true,
-					centerMode : true,
-					slidesToShow : 3,
-					onInit : function() {
-						$('.mainvisual a').show();
+				var $menuButton = $('.menu_button_area > *');
+				$menuButton.on('click',function() {
+					var TouchButton = $(this); 
+					if(TouchButton.hasClass('focus')) {
+						TouchButton.removeClass('focus');
+					} else {
+						TouchButton.addClass('focus');
 					}
 				});
 
-				//modal window
-				$('.meat_image').magnificPopup({
-					type : 'image',
-					mainClass : 'mfp-with-zoom',
-					zoom : {
-						enabled : true,
-						duration : 300,
-						easing : 'ease-in-out',
-						opener : function(openerElement) {
-							return openerElement.is('img') ? openerElement : openerElement.find('img');
-						}
-					}
-
-				});
 
 			});
 		</script>
