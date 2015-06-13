@@ -24,7 +24,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
+    /*background-color:#E4E4E4;
     background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
@@ -43,6 +43,7 @@ body {
     padding:0px;
     text-transform:uppercase;
     width:100%;
+    */
 }
 
 /* Portrait layout (default) */
@@ -113,3 +114,225 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+
+/*  base */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
+	width: 320px;
+}
+
+body {
+	color: #616161;
+	font-size: 62.5%; /* font-size 1em = 10px */
+	font-family:Arial, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+	line-height:1.4;
+}
+
+li {
+  list-style: none;
+}
+
+button:focus {
+	outline:none;
+}
+
+/* clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* header */
+
+header {
+	position:fixed;
+	top:0;
+	width: 100%;
+	height:32px;
+	background:#f00;
+	z-index: 100;
+} 
+
+header h1 {
+	width:100%;
+	color: #fff;
+	font-size: 18px;
+	line-height: 32px;
+	text-align:center;
+}
+
+header > div {
+	position:relative;
+}
+
+header img {
+	width: 100%;
+}
+
+#slide_menu {
+	position: absolute;
+	display: block;
+	background: none;
+	border: none;
+}
+
+#slide_menu {
+	top:8px;
+	right:16px;
+	width: 22px;
+	box-shadow:none;
+}
+
+/* navigation*/
+
+nav {
+	position:fixed;
+	left:-250px;
+	width: 250px;
+	height: 100%;
+	background:#fff;
+	margin: 32px 0 0;
+	z-index: 100;
+}
+
+nav ul li {
+	border-top:solid 2px #dddddd;
+}
+
+nav ul li:last-child {
+	border-bottom:solid 2px #dddddd;
+}
+
+nav ul li a {
+	display:block;
+	width: 100%;
+	color:#666;
+	font-size:1.4rem;
+	padding: 8px 4px 8px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.nav_header {
+	width:100%;
+	height:100px;
+	background:url(../img/bg_01.jpg) no-repeat 50% 50%;
+}
+
+/*  header  */
+header {
+	width: 100%;
+	background: #f00;
+}
+
+/* mainvisual */
+
+.mainvisual {
+	width: 100%;
+	margin: 44px auto 10px;
+}
+
+.mainvisual a {
+	display:block;
+	width:256px;
+	text-align:center;
+	text-decoration:none;
+	margin: 0 16px 0 0;
+}
+
+.mainvisual a:last-of-type {
+	margin:0;
+}
+
+.mainvisual a img {
+	width: 100%;
+}
+
+.mainvisual a p {
+	color:#f00;
+	font-size:16px;
+	line-height:1.4;
+	font-weight:bold;
+	margin: 6px 0 0;
+}
+
+.dt_expalin {
+	width: 256px;
+	font-size:12px;
+	line-height:1.4;
+	margin: 0 auto 10px;
+} 
+/* accodion */
+.accordion {
+	width: 256px;
+	min-height: 32px;
+	background:#f00;
+	margin: 0 auto 0;
+	border-radius:5px;
+}
+
+.accordion label {
+	position:relative;
+	display:block;
+	color:#fff;
+	font-size:14px;
+	line-height:1.4;
+	text-align:center;
+	padding: 8px 0;
+}
+
+.accordion label:after {
+	position:absolute;
+	top:8px;
+	right:10px;
+	display:inline-block;
+	content: "▶︎";
+	-webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+	
+}
+
+.accordion input[type="checkbox"] {
+	display:none;
+}
+
+.accordion input[type="checkbox"] + label + p {
+	height: 0;
+	color: #fff;
+	padding: 0 8px 4px;
+	-webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    overflow: hidden;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.accordion input[type="checkbox"]:checked + label:after {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.accordion input[type="checkbox"]:checked + label + p {
+	height:100%;
+	max-height:9999px;
+}
+

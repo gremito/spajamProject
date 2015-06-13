@@ -41,6 +41,7 @@ app.log = function(l){
  */
 app.initialize = function() {
     this.log('initialize');
+
     // スプラッシュ画面
     navigator.splashscreen.show();
     setTimeout(function() {
