@@ -73,7 +73,7 @@
 				var $menuButton = $('.menu_button_area > *');
 				$menuButton.on('click',function() {
 					var TouchButton = $(this); 
-					if(TouchButton.hasClass('focus')) {
+					if($('[class!="focus"]').not(self) && TouchButton.hasClass('focus')) {
 						TouchButton.removeClass('focus');
 					} else {
 						TouchButton.addClass('focus');
