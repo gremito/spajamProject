@@ -27,8 +27,8 @@
         <link rel="stylesheet" type="text/css"  href="css/normalize.css"/>
         <link rel="stylesheet" type="text/css"  href="css/slick.css"/>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/top_menu.css" />
-        <title>HOME</title>
+        <link rel="stylesheet" type="text/css" href="css/meat_parts.css" />
+        <title>BEEF</title>
     </head>
     
     <body>
@@ -37,22 +37,37 @@
         <nav class="nav_menu">
 				<div class="nav_header">&nbsp;</div>
 				<ul>
-					<li><a href="http://www.google.co.jp/">search</a></li>
+					<li><a href="">home</a></li>
+					<li><a href="">search</a></li>
 				</ul>
 			</nav>
 			<header>
 				<div>
-				<h1>HOME</h1>
+				<h1>BEEF</h1>
 				<button id="slide_menu"><img src="img/button_menu.png" alt="menu" /></button> 
 				</div>	
 			</header>
-			<div class="top_menu">
-				<h2><img src="img/top/title_01.png" alt="Meet Select" /></h2>
-				<div class="menu_button_area cf">
-					<a class="button_cow" href=""> </a>
-					<a class="button_pig" href=""> </a>
-					<a class="button_chick" href=""> </a>
-					<button class="button_add"> </button>
+			<div class="meat_detail">
+				<h2><img src="img/beef_parts/cow/title.png" alt="beef" /></h2>
+				<div class="meat_area cf cow">
+					<div class="meat_part">
+						<a class="parts_01" href=""></a>
+						<a class="parts_02" href=""></a>
+						<a class="parts_03" href=""></a>
+						<a class="parts_04" href=""></a>
+						<a class="parts_05" href=""></a>
+						<a class="parts_06" href=""></a>
+						<a class="parts_07" href=""></a>
+						<a class="parts_08" href=""></a>
+						<a class="parts_09" href=""></a>
+						<a class="parts_10" href=""></a>
+						<a class="parts_11" href=""></a>
+						<a class="parts_12" href=""></a>
+						<a class="parts_13" href=""></a>
+						<a class="parts_14" href=""></a>
+						<a class="parts_15" href=""></a>
+						
+					</div>
 				</div>
 			</div>
 			<footer>
@@ -67,37 +82,8 @@
         <script type="text/javascript" src="js/slick.min.js"></script>
         <script type="text/javascript">
 			$(document).ready(function() {
-				var $menuButton = $('.menu_button_area > *'),
-					$addButton = $('.button_add');
-				$menuButton.on('click',function() {
-					var TouchButton = $(this); 
-					if($('[class!="focus"]').not(self) && TouchButton.hasClass('focus')) {
-						TouchButton.removeClass('focus');
-					} else {
-						TouchButton.addClass('focus'
-						);
-						}
-						});
-
-						/* var options = {
-							url : 'meat_genre.html',
-							dataType : 'html',
-							type : 'GET',
-							success : function(data) {
-								$("item", data).each(function() {
-									$('button_soon').before($addButton);
-								});
-							}
-						};
-
-						$addButton.on('click', function() {
-							$.ajax(options);
-						}); */
-						$addButton.on('click', function() {
-							$.ajax(options);
-						}); 
-
-						});
+				
+			});
 		</script>
     </body>
 </html>
