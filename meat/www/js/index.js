@@ -29,7 +29,7 @@ var log_flag = true;
  * 
  */
 app.log = function(l){
-    if(this.log_flag)
+    if(log_flag)
         console.log('Cordova：' + l);
 };
 
@@ -54,7 +54,7 @@ app.initialize = function() {
 app.bindEvents = function() {
     this.log('bindEvents');
     // ページをロードし終えたらapp.onDeviceReadyを処理
-    document.addEventListener('deviceready', this.onDeviceReady, false);
+    document.addEventListener('deviceready', this.onDeviceReady(), false);
 };
 
 
