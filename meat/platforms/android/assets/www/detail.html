@@ -49,10 +49,10 @@
 				</div>	
 			</header>
 			<div class="mainvisual">
-				<a href=""><img src="img/img_meat.jpg" /><p>ミディアム</p></a>
-				<a href=""><img src="img/img_meat.jpg" /><p>レア</p></a>
-				<a href=""><img src="img/img_meat.jpg" /><p>ダメなやつ</p></a>
-				<a href=""><img src="img/img_meat.jpg" /><p>レア</p></a>
+				<a class="meat_image mfp-with-zoom" href="img/img_meat.jpg"><img src="img/img_meat.jpg" /><p>ミディアム</p></a>
+				<a class="meat_image mfp-with-zoom" href="img/img_meat.jpg"><img src="img/img_meat.jpg" /><p>レア</p></a>
+				<a class="meat_image mfp-with-zoom" href="img/img_meat.jpg"><img src="img/img_meat.jpg" /><p>ダメなやつ</p></a>
+				<a class="meat_image mfp-with-zoom" href="img/img_meat.jpg"><img src="img/img_meat.jpg" /><p>レア</p></a>
 			</div>
 			<p class="dt_expalin">
 				焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。焼肉は最高である。
@@ -72,9 +72,12 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
         <script type="text/javascript" src="js/slick.min.js"></script>
         <script type="text/javascript">
     $(document).ready(function() {
+            
+            //main slide
             $('.mainvisual').slick({
                 slide: 'a',
                 arrows:false,
@@ -85,10 +88,27 @@
                 centerMode: true,
                 slidesToShow: 3,
                 onInit: function() {
-                    $('.mainvisual a').show();
-                }
-            });
-        });
+                    $('.mainvisual a'
+					).show();
+					}
+					});
+					
+				//modal window
+					$('.meat_image').magnificPopup({
+						type : 'image',
+						mainClass : 'mfp-with-zoom',
+						zoom : {
+							enabled : true,
+							duration : 300,
+							easing : 'ease-in-out',
+							opener : function(openerElement) {
+								return openerElement.is('img') ? openerElement : openerElement.find('img');
+							}
+						}
+
+					});
+
+					});
     </script>
     </body>
 </html>
