@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css"  href="../css/normalize.css"/>
+        <link rel="stylesheet" type="text/css"  href="../css/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../css/.css" />
+        <title>肩ロース</title>
+    </head>
+    
+    <body>
+
+        </div>
+        <nav class="nav_menu">
+				<div class="nav_header">&nbsp;</div>
+				<ul>
+					<li><a href="../index.html">home</a></li>
+					<li><a href="http://www.google.co.jp/">search</a></li>
+				</ul>
+			</nav>
+			<header>
+				<div>
+				<h1>肩ロース</h1>
+				<button id="slide_menu"><img src="../img/button_menu.png" alt="menu" /></button> 
+				</div>	
+			</header>
+			<div class="mainvisual">
+				<a class="meat_image mfp-with-zoom" href="../img/meat/roast_01.jpg"><img src="../img/meat/roast_01.jpg" /><p>生</p></a>
+				<a class="meat_image mfp-with-zoom" href="../img/meat/roast_02.jpg"><img src="../img/meat/roast_02.jpg" /><p>レア</p></a>
+				<a class="meat_image mfp-with-zoom" href="../img/meat/roast_03.jpg"><img src="../img/meat/roast_03.jpg" /><p>ミディアムレア</p></a>
+				<a class="meat_image mfp-with-zoom" href="../img/meat/roast_04.jpg"><img src="../img/meat/roast_04.jpg" /><p>コゲ肉</p></a>
+			</div>
+
+			<p class="dt_expalin">
+				肩ロースの部位については、肩から背中にかけての長いロース肉で、最も頭に近い部分になります。<br>
+				脂肪がとりわけ入りやすい霜ふりの柔らかい赤身肉で、ほどよい食感と濃厚な味が特徴です。ステーキ、しゃぶしゃぶ、すき焼きなどにおすすめです。
+			</p>
+
+			<div class="accordion">
+				<input type="checkbox" value="" id="accord_switch"/>
+				<label class="accord_button" for="accord_switch">
+					この部位の豆知識はこちら
+				</label>
+				<p>
+					この「ロース」という部位名、いっけん欧米語に思われますよね？　しかし、実際には「roast（ロースト）」から転訛した和製英語で、「ロースト（焼く）に適した肉の部位」を意味する言葉です。牛ロースは2種類あり、その1つ「肩ロース」は名前のとおり肩の部分にあるロース部位を指します。きめ細かい肉質と柔らかい風味があり、煮込み料理やステーキなどで愛用されるとか。もう1つの「リブロース」は、肩ロースから続く筋肉（胸最長筋）を指します。霜降りが入りやすく肉質も優れているので、しゃぶしゃぶやローストビーフといった料理でよくお目にかかりますよね？　どちらにしても、牛ロースは肉質がいいのでさまざまな料理で活用することができます。みなさんも、牛ロースで美味しい料理を作ってみてください。
+
+				</p>
+			</div>
+
+			<p class="dt_expalin">
+				<h2>詳しくは...</h2>
+				牛肉ランド:<a href="http://www.gyunikuland.com/niku/niku-rose.html">http://www.gyunikuland.com/niku/niku-rose.html</a>
+			</p>
+
+			<footer>
+				<small>&copy; Denpa DANDY all rights reserved</small>
+			</footer>
+			
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../js/index.js"></script>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+        <script type="text/javascript" src="../js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="../js/slick.min.js"></script>
+        <script type="text/javascript">
+			$(document).ready(function() {
+
+				//main slide
+				$('.mainvisual').slick({
+					slide : 'a',
+					arrows : false,
+					dots : false,
+					autoplay : true,
+					autoplaySpeed : 4000,
+					variableWidth : true,
+					centerMode : true,
+					slidesToShow : 3,
+					onInit : function() {
+						$('.mainvisual a').show();
+					}
+				});
+
+				//modal window
+				$('.meat_image').magnificPopup({
+					type : 'image',
+					mainClass : 'mfp-with-zoom',
+					zoom : {
+						enabled : true,
+						duration : 300,
+						easing : 'ease-in-out',
+						opener : function(openerElement) {
+							return openerElement.is('img') ? openerElement : openerElement.find('img');
+						}
+					}
+
+				});
+
+			});
+		</script>
+    </body>
+</html>
