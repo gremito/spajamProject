@@ -16,36 +16,85 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+var app = {};
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
-    }
+// デバッグフラグ
+var log_flag = true;
+
+
+/**
+ * デバッグログ表示メソッド
+ * @param   l：logで表示する内容
+ * 
+ */
+app.log = function(l){
+    if(log_flag)
+        console.log('Cordova：' + l);
 };
 
+
+/**
+ * 初期化メソッド
+ * 
+ * @return {[type]} [description]
+ */
+app.initialize = function() {
+    this.log('initialize');
+    // スプラッシュ画面
+    navigator.splashscreen.show();
+    setTimeout(function() {
+        navigator.splashscreen.hide();
+        // app.bindEvents()を処理
+        this.bindEvents();
+    }, 3000);
+};
+
+
+/**
+ * アプリ起動後に処理されるinitializeメソッド内で呼ばれる
+ * 
+ * @return {[type]} [description]
+ */
+app.bindEvents = function() {
+    this.log('bindEvents');
+    // ページをロードし終えたらapp.onDeviceReadyを処理
+    document.addEventListener('deviceready', this.onDeviceReady(), false);
+};
+
+
+
+/**
+ * devicereadyのイベントハンドラ
+ * 
+ * @return {[type]} [description]
+ */
+app.onDeviceReady = function() {
+    this.log('onDeviceReady');
+    this.receivedEvent('deviceready');
+}
+
+
+/**
+ * DOMの処理
+ * 
+ * @param  {[type]} id [description]
+ * @return {[type]}    [description]
+ */
+app.receivedEvent = function(id) {
+
+    var parentElement       =   document.getElementById(id);
+    var listeningElement    =   parentElement.querySelector('.listening');
+    var receivedElement     =   parentElement.querySelector('.received');
+
+    listeningElement.setAttribute('style', 'display:none;');
+    receivedElement.setAttribute('style', 'display:block;');
+
+    this.log('Received Event: ' + id);
+}
+
+
+
+// 初期化処理開始
 app.initialize();
+

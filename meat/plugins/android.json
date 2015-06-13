@@ -19,7 +19,7 @@
     },
     "installed_plugins": {
         "org.apache.cordova.splashscreen": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+            "PACKAGE_NAME": "jp.co.denpadandy.meat"
         }
     },
     "dependent_plugins": {}

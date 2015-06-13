@@ -41,8 +41,13 @@ app.log = function(l){
  */
 app.initialize = function() {
     this.log('initialize');
-    // app.bindEvents()を処理
-    this.bindEvents();
+    // スプラッシュ画面
+    navigator.splashscreen.show();
+    setTimeout(function() {
+        navigator.splashscreen.hide();
+        // app.bindEvents()を処理
+        this.bindEvents();
+    }, 3000);
 };
 
 
