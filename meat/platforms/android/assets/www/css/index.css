@@ -134,7 +134,7 @@ body {
 	background: #fff7e5;
 }
 
-li {
+ul li {
   list-style: none;
 }
 
@@ -194,7 +194,8 @@ header img {
 #slide_menu {
 	top:8px;
 	right:16px;
-	width: 22px;
+	width: 20px;
+	height:13px;
 	box-shadow:none;
 }
 
@@ -742,5 +743,47 @@ img.mfp-img {
 
 .mfp-with-zoom.mfp-removing .mfp-container, 
 .mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width:auto;
+  max-width: 300px;
+  margin: 20px auto;
+}
+/*
+ 
+====== Zoom effect ======
+
+*/
+.mfp-zoom-in {
+  /* start state */
+  /* animate in */
+  /* animate out */
+}
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: scale(1);
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  transform: scale(0.8);
+  opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
   opacity: 0;
 }
