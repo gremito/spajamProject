@@ -22,6 +22,9 @@ $(window).bind("resize", function() {
 
 /* menu */
 $(function() {
+        
+        $('body').append('<div class="menu_bg"></div>');
+        
         var $allBody = $('body,html'),
             $Body = $('body'),
             $offcanvasMenu = $('.nav_menu'),

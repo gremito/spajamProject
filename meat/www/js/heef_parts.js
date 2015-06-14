@@ -79,7 +79,6 @@ app.onDeviceReady = function() {
  */
 app.isZonbiMeat = function() {
     this.log('isZonbiMeat');
-    document.images["cow"].src = "../img/beef_parts/cow/cow_zonmbie.png";
 
 }
 

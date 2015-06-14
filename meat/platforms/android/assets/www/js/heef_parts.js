@@ -42,13 +42,8 @@ app.log = function(l){
 app.initialize = function() {
     this.log('initialize');
 
-    // スプラッシュ画面
-    navigator.splashscreen.show();
-    setTimeout(function() {
-        navigator.splashscreen.hide();
-        // app.bindEvents()を処理
-        this.bindEvents();
-    }, 3000);
+    // app.bindEvents()を処理
+    this.bindEvents();
 };
 
 
@@ -84,7 +79,6 @@ app.onDeviceReady = function() {
  */
 app.isZonbiMeat = function() {
     this.log('isZonbiMeat');
-    document.images["cow"].src = "../img/beef_parts/cow/cow_zonmbie.png";
 
 }
 
