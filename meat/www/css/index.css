@@ -222,6 +222,9 @@ nav {
 	background:#fff;
 	border-right: solid 2px #ddd;
 	z-index: 100;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 nav ul li {
