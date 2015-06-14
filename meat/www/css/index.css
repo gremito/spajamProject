@@ -271,7 +271,7 @@ nav ul li a {
 
 .mainvisual a {
 	display:block;
-	width:256px;
+	width:160px;
 	text-align:center;
 	text-decoration:none;
 	margin: 0 16px 0 0;
@@ -282,7 +282,8 @@ nav ul li a {
 }
 
 .mainvisual a img {
-	width: 100%;
+	width: 150px;
+	margin: 0 auto;
 }
 
 .mainvisual a:focus {
@@ -290,11 +291,11 @@ nav ul li a {
 }
 
 .mainvisual a p {
-	color:#ef7540;
-	font-size:16px;
-	line-height:1.4;
+	color: #444444;
+	font-size: 12px;
 	font-weight:bold;
-	margin: 6px 0 0;
+	line-height: 24px;
+	text-align: center;
 }
 
 .dt_expalin {
