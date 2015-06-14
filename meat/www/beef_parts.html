@@ -45,9 +45,19 @@
 				$('.modal').magnificPopup({
 					type : 'inline',
 					mainClass: 'mfp-zoom-in'
-				});
+										});
+				//確率
 
-				});
+					var cowProbab = Math.random(),
+					    cowImg = $('.cow');
+
+					if (cowProbab < 0.33) {
+						cowImg.addClass('zombie');
+					} else {
+						cowImg.removeClass('zombie');
+					}
+
+					});
 		</script>
 
         </div>
