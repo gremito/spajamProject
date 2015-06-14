@@ -180,7 +180,6 @@
 	z-index: 23;	
 }
 
-
 .cow .parts_15 {
 	top: 52px;
 	left: 176px;
@@ -189,4 +188,66 @@
 	background: url(../img/beef_parts/cow/meet_11.png) no-repeat;
 	background-size: 28px auto !important;
 	z-index: 24;	
+}
+
+.meat_list {
+	width: 287px;
+	/* height: 255px; */	
+	background-color: #fff;
+	box-shadow: 2px 4px 5px 0px rgba(6, 0, 1, 0.1);
+	border-radius:5px;
+	margin: 19px auto 20px;
+	padding: 8px 15px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.meat_list > h2 {
+	color: #ef7540;
+	font-size: 18px;
+	line-height: 25px;
+	font-weight:bold;
+	margin: 0 0 6px;
+}
+
+.meat_list > ol {
+	margin:0 auto;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	list-style-position: inside;
+	/* -webkit-column-width:86px;
+	-moz-column-width:86px;
+	column-width:86px; */
+}
+
+.meat_list > ol li {
+	/* width: 86px; */
+	/* -webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	-webkit-column-width:86px;
+	-moz-column-width:86px;
+	column-width:86px; */
+}
+
+.meat_list > ol li a {
+	display:block;
+	color: #686463;
+	font-size: 13px;
+	line-height: 18px;
+	/* font-weight:bold; */
+	text-decoration:none;
+}
+
+.modal a:focus {
+	outline:none;
+}
+
+#c_soon {
+	color: #ef7540;
+	font-size:15px;
+	font-weight:bold;
+	text-align:center;
 }

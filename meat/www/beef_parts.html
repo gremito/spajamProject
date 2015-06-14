@@ -50,29 +50,59 @@
 			<div class="meat_detail">
 				<h2><img src="img/beef_parts/cow/title.png" alt="beef" /></h2>
 				<div class="meat_area cf cow">
+
 					<div class="meat_part">
-						<a class="parts_01" href=""></a>
 						<a class="parts_02" href="detail/roast_detail.html"></a>
-						<a class="parts_03" href=""></a>
-						<a class="parts_04" href=""></a>
-						<a class="parts_05" href=""></a>
-						<a class="parts_06" href=""></a>
-						<a class="parts_07" href=""></a>
 						<a class="parts_08" href="detail/guara_detail.html"></a>
 						<a class="parts_09" href="detail/kalbi_detail.html"></a>
-						<a class="parts_10" href=""></a>
-						<a class="parts_11" href=""></a>
-						<a class="parts_12" href=""></a>
-						<a class="parts_13" href=""></a>
-						<a class="parts_14" href=""></a>
-						<a class="parts_15" href=""></a>
+
+					<div class="meat_part modal">
+						<a class="parts_01" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_02" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_03" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_04" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_05" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_06" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_07" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_08" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_09" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_10" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_11" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_12" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_13" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_14" href="#c_soon" data-effect="mfp-zoom-in"></a>
+						<a class="parts_15" href="#c_soon" data-effect="mfp-zoom-in"></a>
 						
 					</div>
 				</div>
 			</div>
+			<div class="meat_list">
+				<h2>Menu</h2>
+				<ol class="modal">
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">ネック</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">ウルテ</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">肩ロース</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">フク</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">肩</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">リブロース</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">サーロイン</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">ランプ</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">外モモ</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">中バラ</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">シンタマ</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">カルビ</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">ギアラ</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">トモバラ</a></li>
+					<li><a href="#c_soon" data-effect="mfp-zoom-in">カタバラ</a></li>
+				</ol>
+			</div>
 			<footer>
 				<small>&copy; Denpa DANDY all rights reserved</small>
 			</footer>
+			
+			<div id="c_soon" class="white-popup mfp-hide">
+				Coming SOON!
+				</div>
 			
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
@@ -82,8 +112,14 @@
         <script type="text/javascript" src="js/slick.min.js"></script>
         <script type="text/javascript">
 			$(document).ready(function() {
-				
-			});
+				//modal window
+				$('.modal').magnificPopup({
+					type : 'inline',
+					delegate: 'a',
+					mainClass: 'mfp-zoom-in'
+				});
+
+				});
 		</script>
     </body>
 </html>
