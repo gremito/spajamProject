@@ -14,9 +14,13 @@
         Apache Cordova Team
     </author>
 
+    <!-- スプラッシュ設定 -->
     <preference name="SplashScreen" value="splash" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="SplashMaintainAspectRatio" value="true|false" />
+
+    <!-- 画面縦固定 -->
+    <preference name="Orientation" value="portrait" />
 
     <content src="index.html" />
     <access origin="*" />
