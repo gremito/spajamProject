@@ -241,7 +241,8 @@
 	text-decoration:none;
 }
 
-.modal a:focus {
+.meat_part a:focus,
+.meat_list a:focus {
 	outline:none;
 }
 

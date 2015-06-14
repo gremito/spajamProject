@@ -196,6 +196,8 @@ header img {
 	right:16px;
 	width: 20px;
 	height:13px;
+	background:url(../img/button_menu.png) no-repeat;
+	background-size:20px auto !important;
 	box-shadow:none;
 }
 
