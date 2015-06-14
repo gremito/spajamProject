@@ -76,7 +76,7 @@ $(function() {
         
         $menuBg.on('click',function() {
             if ($(this).css('display') == 'block') {
-                $('.menu_btn').click();
+                $('#slide_menu').click();
                 $menuBtn.removeClass('btn_close');
            }
         });
